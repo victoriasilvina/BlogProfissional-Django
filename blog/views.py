@@ -3,10 +3,23 @@ from .models import Pessoal, Rotina, Gostos
 
 # Create your views here.
 def index(request):
-    return render(request, 'blog/index.html')
+    familia = Pessoal.objects.all()
+    gostos = Gostos.objects.all()
+    rotina = Rotina.objects.all()
+    
+    contexto = {
+        'familia': familia,
+        'gostos': gostos,
+        'rotina': rotina,
+    }
+    return render(request, 'blog/index.html', contexto)
 
 def rotina(request):
-    return render(request, 'blog/rotina.html')
+    rotina = Rotina.objects.all()
+    contexto = {
+        'rotina': rotina,
+    }
+    return render(request, 'blog/rotina.html', contexto)
 
 def gostos(request):
     return render(request, 'blog/gostos.html')

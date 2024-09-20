@@ -1,0 +1,53 @@
+li a {
+    text-decoration: none;
+}
+
+a {
+    color: #ffffff;
+    font-family: system-ui;
+    font-size: large;
+    font-weight: bold;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+}
+
+a:hover {
+    color: #ffdeff;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding-top: 70px;
+    background-color: #f4f4f4;
+}
+
+div {
+    width: 100%;
+    text-align: center;
+    max-width: 70%;
+    margin: auto; 
+}
+
+nav {
+    text-align: center;
+    overflow: hidden;
+    background-color: #4323d5;
+    box-shadow: 0 0px 16px 0 rgba(16, 42, 114, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+}
+
+h1 {
+    color: #4323d5;
+    font-family: system-ui;
+    font-size: 3em;
+    font-weight: bold;
+}

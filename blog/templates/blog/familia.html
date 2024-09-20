@@ -1,1 +1,18 @@
 {% extends "blog/base.html" %}
+
+{% block parte_central %}
+    <h1>Família</h1>
+    <p>Minha família é...</p>
+    {%for membro in familia%}
+
+        <h2>{{membro.nome}}</h2>
+        <p>{{membro.parentesco}}</p>
+        {% if membro.imagem %}
+            <img src="{{ membro.imagem.url }}" alt="Imagem de {{membro.nome}}" width="40%">
+        {% else %}0
+            <p>Sem imagem disponível</p>
+        {% endif %}
+        <p>{{membro.descricao}}</p>
+
+    {%endfor%}
+{% endblock %}

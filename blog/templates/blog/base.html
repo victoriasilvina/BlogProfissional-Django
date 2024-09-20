@@ -1,26 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Profissional</title>
+    <title>Blog de Victória Silvina Gonçalves</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'familia' %}">Família</a></li>
-            <li><a href="{% url 'rotina' %}">Rotina</a></li>
-            <li><a href="{% url 'gostos' %}">Gostos</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Início</a></li>
+        <li><a href="{% url 'familia' %}">Família</a></li>
+        <li><a href="{% url 'rotina' %}">Rotina</a></li>
+        <li><a href="{% url 'gostos' %}">Gostos</a></li>
+    </ul>
+</nav>
 
-<div>
-    {% block parte_central %}
-    
-    {% endblock %}
-</div>
+<body>
+    <div>
+        {% block parte_central %}
+
+        {% endblock %}
+    </div>
 </body>
+
 </html>

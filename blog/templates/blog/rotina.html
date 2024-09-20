@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+
+{% block parte_central %}
+<div>
+    <h1>Rotina</h1>
+    <p>Sobre os lugares que geralmente frequento!</p>
+</div>
+
+{%for rotinas in rotina%}
+
+<div>
+
+    <h2>{{rotinas.titulo}}</h2>
+    {% if rotinas.imagem %}
+    <p>{{rotinas.descricao}}</p
+    ><img src="{{ rotinas.imagem.url }}" alt="Imagem de {{rotinas.titulo}}" width="40%">
+    {% else %}0
+    <p>Sem imagem disponível</p>
+    {% endif %}
+    
+
+</div>
+{%endfor%}
+{% endblock %}
