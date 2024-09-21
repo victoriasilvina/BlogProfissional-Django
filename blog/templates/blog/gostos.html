@@ -1,22 +1,21 @@
 {% extends "blog/base.html" %}
 
 {% block parte_central %}
-    <h1>Gostos</h1>
-    <p>Meus gostos são variados...</p>
+    <h1 style="margin-bottom: 20px;">Gostos - que são variados</h1>
 
     {%for gosto in gostos%}
 
 <div style="padding-bottom: 0px;">
     {% if gosto.titulo %}
-    <h2 style="margin-bottom: 10px;">{{gosto.titulo}}</h2>
+    <h2 style="margin-bottom: 10px; margin-top: 15px; text-align: left; font-family: 'Franklin Gothic Medium'; font-size: 30px;">{{gosto.titulo}}</h2>
     {% else %}
     {% endif %}
     {% if gosto.descricao %}
-    <p style="margin-top: 0px;">{{gosto.descricao}}</p>
+    <p style="margin-top: 0px; text-align: left;" >{{gosto.descricao}}</p>
     {% else %}
     {% endif %}
     {% if gosto.imagem %}
-    <img src="{{ gosto.imagem.url }}" alt="Imagem de {{gosto.titulo}}" width="40%">
+    <img src="{{ gosto.imagem.url }}" alt="Imagem de {{gosto.titulo}}" width="670px">
     {% else %}
     {% endif %}
 

@@ -2,22 +2,21 @@
 
 {% block parte_central %}
 
-<h1>Rotina</h1>
-<p>Sobre os lugares que geralmente frequento.</p>
+<h1 style="margin-bottom: 20px;">Rotina - lugares que vou</h1>
 
 {%for rotinas in rotina%}
 
 <div style="padding-bottom: 0px;">
     {% if rotinas.titulo %}
-    <h2 style="margin-bottom: 10px;">{{rotinas.titulo}}</h2>
+    <h2 style="margin-bottom: 10px; margin-top: 15px; text-align: left; font-family: 'Franklin Gothic Medium'; font-size: 30px;">{{rotinas.titulo}}</h2>
     {% else %}
     {% endif %}
     {% if rotinas.descricao %}
-    <p style="margin-top: 0px;">{{rotinas.descricao}}</p>
+    <p style="margin-top: 0px; text-align: left;">{{rotinas.descricao}}</p>
     {% else %}
     {% endif %}
     {% if rotinas.imagem %}
-    <img src="{{ rotinas.imagem.url }}" alt="Imagem de {{rotinas.titulo}}" width="50%">
+    <img src="{{ rotinas.imagem.url }}" alt="Imagem de {{rotinas.titulo}}" width="670px" >
     {% else %}
     {% endif %}
 

@@ -1,15 +1,57 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 {% block parte_central %}
 <h1>Blog Pessoal</h1>
 
-<section>
+<div class="div2">
+    <section style="text-align: left; ">
+        <h2 style="font-family: 'Franklin Gothic Medium'; font-size: 30px;">Prazer, meu nome é Victória Silvina
+            Gonçalves!</h2>
+        <p> Tenho 18 anos, sou filha, irmã (inclusive, tenho uma gêmea), tia, sobrinha, prima, neta, amiga, enfim.
+            Acima de tudo sou Filha de Deus, amo serví-lo e adorá-lo! Também sou estudante na área da TI, mas gosto de
+            outras áreas. Moro em Rodolfo Fernandes, uma cidadezinha no interior do Rio Grande do Norte. Sou uma pessoa
+            tímida e extrovertida, depende da situação, mas gosto de conversar, interagir e conhecer pessoas novas.
+        </p>
+        <img src="{% static 'image/eu.jpg' %}" alt="Minha imagem" width="470px">
+        <img src="{% static 'image/eu2.jpg' %}" alt="Minha imagem" width="470px"> 
 
-    <h2 style="text-align: left;">Prazer, sou Victória Silvina Gonçalves!</h2>
-    <p style="text-align: left;"> Tenho 18 anos, sou filha, irmã, tia, sobrinha, prima, neta, amiga, enfim. 
-        Acima de tudo sou Filha de Deus, amo serví-lo e adorá-lo! Também sou estudante na área da TI, mas gosto de outras áreas também.
-    </p>
+    </section>
+</div>
+<div class="div">
+    <section class="sessao">
 
+        <h2 style="font-family: 'Franklin Gothic Medium'; font-size: 30px; text-align: left;">Conheça a minha Família...
+        </h2>
+        <p style="text-align: left;">
+            Meus pais se chamam Antônio Gonçalves e Alcídia Silvina; minha irmã gêmea é Vivian, minha irmã mais velha é
+            Ruth; minha sobrinha é Luiza; meu sobrinho, Lucca. Meu cunhado é Jederson. Veja fotos deles e conheça um
+            pouco
+            sobre, clicando aqui: <br>
+        </p> <a href="{% url 'familia' %}" style="font-size: 100px; text-align: left;">Minha Família</a>
 
-</section>
+    </section>
+</div>
+<div class="div2">
+    <section>
+        <h2 style="font-family: 'Franklin Gothic Medium'; font-size: 30px; text-align: left;">Conheça a minha Rotina...
+        </h2>
+        <p style="text-align: left;">
+            Tenho uma rotina “monótona”, talvez. Mas veja meus principais lugares aqui: <br>
+        </p> <a href="{% url 'rotina' %}" style="font-size: 100px; text-align: left;">Minha Rotina</a>
+
+    </section>
+</div>
+<div class="div">
+    <section>
+        <h2 style="font-family: 'Franklin Gothic Medium'; font-size: 30px; text-align: left;">Conheça meus Gostos...
+        </h2>
+        <p style="text-align: left;">
+            Tenho gostos variados. Gosto de muita coisa! Uma delas é música! Saiba mais dos meus gostos, aqui:
+            <br>
+        </p> <a href="{% url 'gostos' %}" style="font-size: 100px; text-align: left;">Meus gostos</a>
+
+    </section>
+</div>
+
 {% endblock %}
