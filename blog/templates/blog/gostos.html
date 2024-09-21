@@ -4,5 +4,23 @@
     <h1>Gostos</h1>
     <p>Meus gostos são variados...</p>
 
-    
+    {%for gosto in gostos%}
+
+<div style="padding-bottom: 0px;">
+    {% if gosto.titulo %}
+    <h2 style="margin-bottom: 10px;">{{gosto.titulo}}</h2>
+    {% else %}
+    {% endif %}
+    {% if gosto.descricao %}
+    <p style="margin-top: 0px;">{{gosto.descricao}}</p>
+    {% else %}
+    {% endif %}
+    {% if gosto.imagem %}
+    <img src="{{ gosto.imagem.url }}" alt="Imagem de {{gosto.titulo}}" width="40%">
+    {% else %}
+    {% endif %}
+
+
+</div>
+{%endfor%}
 {% endblock %}

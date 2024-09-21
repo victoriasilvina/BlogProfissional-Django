@@ -1,18 +1,25 @@
 {% extends "blog/base.html" %}
 
 {% block parte_central %}
-    <h1>Família</h1>
-    <p>Minha família é...</p>
-    {%for membro in familia%}
-
-        <h2>{{membro.nome}}</h2>
-        <p>{{membro.parentesco}}</p>
-        {% if membro.imagem %}
-            <img src="{{ membro.imagem.url }}" alt="Imagem de {{membro.nome}}" width="40%">
-        {% else %}0
-            <p>Sem imagem disponível</p>
-        {% endif %}
-        <p>{{membro.descricao}}</p>
-
-    {%endfor%}
+<h1>Família</h1>
+{%for membro in familia%}
+<div style="padding-bottom: 0px;">
+    {% if membro.nome %}
+    <h2 style="margin-bottom: 10px;">{{membro.nome}}</h2>
+    {% else %}
+    {% endif %}
+    {% if membro.parentesco %}
+    <p style="margin-top: 0px;">{{membro.parentesco}}</p>
+    {% else %}
+    {% endif %}
+    {% if membro.imagem %}
+    <img src="{{ membro.imagem.url }}" alt="Imagem de {{membro.nome}}" width="40%">
+    {% else %}
+    {% endif %}
+    {% if membro.descricao %}
+    <p>{{membro.descricao}}</p>
+    {% else %}
+    {% endif %}
+</div>
+{%endfor%}
 {% endblock %}

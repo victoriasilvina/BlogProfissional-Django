@@ -27,11 +27,11 @@ body {
     background-color: #f4f4f4;
 }
 
-div {
+div{
     width: 100%;
     text-align: center;
     max-width: 70%;
-    margin: auto; 
+    margin: auto;
 }
 
 nav {
@@ -40,14 +40,15 @@ nav {
     background-color: #4323d5;
     box-shadow: 0 0px 16px 0 rgba(16, 42, 114, 0.6);
     position: fixed;
-    width: 100%;
+    width: 100%;    
+    padding: 0px;
     top: 0;
-    
+
 }
 
 h1 {
     color: #4323d5;
-    font-family: system-ui;
+    font-family: 'Trebuchet MS';
     font-size: 3em;
     font-weight: bold;
 }

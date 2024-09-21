@@ -22,7 +22,11 @@ def rotina(request):
     return render(request, 'blog/rotina.html', contexto)
 
 def gostos(request):
-    return render(request, 'blog/gostos.html')
+    gostos = Gostos.objects.all()
+    contexto = {
+        'gostos': gostos,
+    }
+    return render(request, 'blog/gostos.html', contexto)
 
 def familia(request):
     familia = Pessoal.objects.all()

@@ -1,23 +1,26 @@
 {% extends "blog/base.html" %}
 
 {% block parte_central %}
-<div>
-    <h1>Rotina</h1>
-    <p>Sobre os lugares que geralmente frequento!</p>
-</div>
+
+<h1>Rotina</h1>
+<p>Sobre os lugares que geralmente frequento.</p>
 
 {%for rotinas in rotina%}
 
-<div>
-
-    <h2>{{rotinas.titulo}}</h2>
-    {% if rotinas.imagem %}
-    <p>{{rotinas.descricao}}</p
-    ><img src="{{ rotinas.imagem.url }}" alt="Imagem de {{rotinas.titulo}}" width="40%">
-    {% else %}0
-    <p>Sem imagem disponível</p>
+<div style="padding-bottom: 0px;">
+    {% if rotinas.titulo %}
+    <h2 style="margin-bottom: 10px;">{{rotinas.titulo}}</h2>
+    {% else %}
     {% endif %}
-    
+    {% if rotinas.descricao %}
+    <p style="margin-top: 0px;">{{rotinas.descricao}}</p>
+    {% else %}
+    {% endif %}
+    {% if rotinas.imagem %}
+    <img src="{{ rotinas.imagem.url }}" alt="Imagem de {{rotinas.titulo}}" width="50%">
+    {% else %}
+    {% endif %}
+
 
 </div>
 {%endfor%}
