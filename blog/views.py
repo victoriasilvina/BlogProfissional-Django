@@ -1,18 +1,8 @@
 from django.shortcuts import render
 from .models import Pessoal, Rotina, Gostos
 
-# Create your views here.
 def index(request):
-    familia = Pessoal.objects.all()
-    gostos = Gostos.objects.all()
-    rotina = Rotina.objects.all()
-    
-    contexto = {
-        'familia': familia,
-        'gostos': gostos,
-        'rotina': rotina,
-    }
-    return render(request, 'blog/index.html', contexto)
+    return render(request, 'blog/index.html')
 
 def rotina(request):
     rotina = Rotina.objects.all()
